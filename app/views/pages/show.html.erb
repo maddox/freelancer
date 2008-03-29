@@ -1,0 +1,7 @@
+<h1><%= link_to 'Pages', pages_path %> / <%= @page.title %></h1>
+
+<div id="page_body" style="border: 2px solid #000; margin: 20px; padding: 10px;">
+	<%= textilize(@page.body) %>
+</div>
+
+<%= link_to 'Edit Page', edit_page_path(@page) %>

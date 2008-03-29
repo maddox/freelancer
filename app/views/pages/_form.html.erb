@@ -1,0 +1,13 @@
+<% form_for @page do |f| -%>
+
+	<p><%= f.label :title %><br />
+	<%= f.text_field :title %></p>
+
+	<p><%= f.label :slug %><br />
+	<%= f.text_field :slug %></p>
+
+	<p><%= f.label :body %><br />
+	<%= f.text_area :body %></p>
+
+	<%= form_model_buttons @page %>
+<% end -%>

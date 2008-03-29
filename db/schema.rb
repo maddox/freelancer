@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 5) do
+ActiveRecord::Schema.define(:version => 6) do
 
   create_table "asset_categories", :force => true do |t|
     t.integer  "project_id"
@@ -30,6 +30,15 @@ ActiveRecord::Schema.define(:version => 5) do
 
   create_table "clients", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pages", :force => true do |t|
+    t.string   "title"
+    t.string   "slug"
+    t.text     "body"
+    t.integer  "position"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
