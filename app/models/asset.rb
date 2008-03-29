@@ -4,8 +4,8 @@ class Asset < ActiveRecord::Base
 
 
   has_attached_file :attachment, 
-                    :styles => { :thumb => "300x300>",
-                                 :square  => "75x75#" }
+                    :styles => { :thumb => "100x100>",
+                                 :square  => "40x40#" }
 
 
 end
