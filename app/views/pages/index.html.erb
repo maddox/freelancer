@@ -1,6 +1,6 @@
 <h1>Pages</h1>
 <% @pages.each do |page| -%>
-<p><%= link_to "/#{page.slug}", page_path(page) %> -  <%= link_to 'Delete', page_path(page), :method => :delete%></p>	
+<p><%= link_to "/#{page.slug}", page_path(page.slug) %> -  <%= link_to 'Edit', edit_page_path(page.slug) %> - <%= link_to 'Delete', page_path(page.slug), :method => :delete%></p>	
 <% end -%>
 
 <%= link_to 'New page', new_page_path %>
