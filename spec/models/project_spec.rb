@@ -9,7 +9,7 @@ describe Project do
       @project = Project.new( :title => 'Million Dollar Social Network',
                               :description => '',
                               :repository => '',
-                              :client_id => clients(:microsoft))
+                              :client_id => 1)
     end
 
     it "should require a title" do
