@@ -31,6 +31,15 @@ describe Project do
       @project.client.should == clients(:microsoft)
     end
 
+    it "should have many asset_categories" do
+      Project.reflect_on_association(:asset_categories).should_not be(nil)
+    end
+
+    it "should have many projects officially" do
+      @project = projects(:big_project)
+      @project.asset_categories.size.should == 2
+    end
+
   end
 
 
