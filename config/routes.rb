@@ -5,5 +5,7 @@ ActionController::Routing::Routes.draw do |map|
     project.resources :assets, :collection => {:showcase => :get}
     project.resources :asset_categories
   end
+  
+  map.home '/', :controller => 'clients', :action => 'index'
 
 end
