@@ -1,0 +1,10 @@
+<h1><%= @project.title %></h1>
+
+<dl>
+	<dt>Description</dt>
+	<dd><%= @project.description%></dd>
+	<dt>Repository</dt>
+	<dd><%= @project.repository%></dd>
+</dl>
+
+<%= link_to 'All Projects', client_projects_path(@client) %>

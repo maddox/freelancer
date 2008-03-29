@@ -1,0 +1,6 @@
+<h1>Projects</h1>
+<% @projects.each do |project| -%>
+<p><%= link_to project.title, client_project_path(@client, project) %> - <%= link_to 'Delete', client_project_path(@client, project), :method => :delete %></p>	
+<% end -%>
+
+<%= link_to 'New project', new_client_project_path(@client) %>

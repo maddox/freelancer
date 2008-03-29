@@ -1,0 +1,13 @@
+<% form_for [@client, @project] do |f| -%>
+
+	<p><%= f.label :title %><br />
+	<%= f.text_field :title %></p>
+
+	<p><%= f.label :description %><br />
+	<%= f.text_area :description %></p>
+
+	<p><%= f.label :repository %><br />
+	<%= f.text_field :repository %></p>
+
+	<%= submit_tag 'save' %>
+<% end -%>
