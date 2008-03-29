@@ -27,6 +27,16 @@ describe AssetCategory do
       @asset_category = asset_categories(:home_page)
       @asset_category.project.should == projects(:big_project)
     end
+      
+    it "should have many assets" do
+      AssetCategory.reflect_on_association(:assets).should_not be(nil)
+    end
+      
+    it "should have many assets officially" do
+      @asset_category = asset_categories(:home_page)
+      @asset_category.assets.size.should == 2
+    end
+      
 
   end
 
