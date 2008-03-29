@@ -1,7 +1,7 @@
 <% form_for @client do |f| -%>
 
-	<%= f.label :name %>
-	<%= f.text_field :name %>
+	<p><%= f.label :name %><br />
+	<%= f.text_field :name %></p>
 
-	<%= submit_tag 'save' %>
+	<%= form_model_buttons @client %>
 <% end -%>

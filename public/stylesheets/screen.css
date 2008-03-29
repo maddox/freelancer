@@ -10,6 +10,14 @@ p	{
 	margin:				0 0 1em 0;
 	}
 
+a{
+	color: #1e44b8;
+}
+
+a:hover{
+	color: #2b5dfc;
+}
+
 #wrapper{
 	margin: 20px;
 }
