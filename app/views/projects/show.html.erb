@@ -7,4 +7,6 @@
 	<dd><%= @project.repository%></dd>
 </dl>
 
-<%= link_to 'All Projects', client_projects_path(@client) %>
+<p><%= link_to 'This Project&#8217;s Assets', project_assets_path(@project) %></p>
+
+<p><%= link_to 'All Projects', client_projects_path(@client) %></p>

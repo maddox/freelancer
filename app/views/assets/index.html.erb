@@ -1,0 +1,16 @@
+<h1>Assets</h1>
+
+<% @assets.each do |assets| -%>
+	<h3><%= assets[0].category.title %></h3>
+
+	<ul>
+	<% assets.each do |asset| -%>
+		<li><%= asset.title %></li>
+	<% end -%>
+	</ul>
+
+	<h4>New Asset</h4>
+	<%= render :partial => "assets/form", :locals => {:asset_category_id => assets[0].category.id, :project => @project, :asset => Asset.new} %>
+<% end -%>
+
+<%#= link_to 'New project', new_client_project_path(@client) %>

@@ -1,0 +1,12 @@
+<% form_for [project, asset], :html => {:multipart => true} do |f| -%>
+
+	<p><%= f.label :title %><br />
+	<%= f.text_field :title %></p>
+	
+	<p><%= f.label :attachment %><br />
+		<%= f.file_field :attachment %></p>
+		
+	<%= f.hidden_field :asset_category_id, :value => asset_category_id%>
+
+	<%= submit_tag 'save' %>
+<% end -%>
