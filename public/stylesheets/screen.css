@@ -1,0 +1,80 @@
+body {
+	margin: 0;
+	padding: 0;
+	font: 15px Helvetica, Verdana, Arial, sans-serif;
+	color: #111;
+	background-color: #fff;
+}
+
+p	{
+	margin:				0 0 1em 0;
+	}
+
+#wrapper{
+	margin: 20px;
+}
+
+#header{
+	font-size: 30px;
+	color: #dde3fd;
+	background-color: #2b5dfc;
+	padding: 10px;
+}
+
+#footer{
+	color: #dde3fd;
+	background-color: #2b5dfc;
+	font-size: 10px;
+	padding: 4px 8px;
+	margin-top: 40px;
+}
+
+
+#nav ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#nav ul li{
+	float: left;
+	margin: 0;
+	padding: 0 1px 0 0;
+}
+
+#nav ul li a {
+	display: block;
+	padding: 7px 10px 8px 10px;
+	background-color: #2b5dfc;
+	color: #d9d9c5;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 1em;
+	}
+
+	#nav ul li a:hover {
+	color: #fff;
+	}
+
+
+
+
+
+
+
+	.clearfix:after {
+	    content: "."; 
+	    display: block; 
+	    height: 0; 
+	    clear: both; 
+	    visibility: hidden;
+	}
+
+	.clearfix {display: inline-block;}
+
+	/* Hides from IE-mac \*/
+	* html .clearfix {height: 1%;}
+	.clearfix {display: block;}
+	/* End hide from IE-mac */

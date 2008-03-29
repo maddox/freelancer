@@ -12,8 +12,26 @@
 </head>
 
 <body>
+	<div id="wrapper">
+		<div id="header">
+			Freelancer!
+		</div>
+		
+		<div id="nav" class="clearfix">
+			<ul>
+				<li><%=link_to 'Clients', clients_path %></li>
+			</ul>
+		</div>
+		
+		<div id="content">
+			<%= yield %>
+		</div>
+		
+		<div id="footer">
+			Powered by Freelancer!
+		</div>
+	</div>
 
-<%= yield %>
 
 </body>
 </html>
