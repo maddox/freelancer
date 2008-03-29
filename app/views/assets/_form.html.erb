@@ -8,5 +8,5 @@
 		
 	<%= f.hidden_field :asset_category_id, :value => asset_category_id%>
 
-	<%= form_model_buttons @asset %>
+	<%= submit_tag 'Create Asset' %> or <%= link_to 'cancel', '#', :onclick => "jQuery(document).trigger('close.facebox')"%>
 <% end -%>

@@ -1,0 +1,8 @@
+<h2>Add Category</h2>
+<% form_for [@project, @asset_category] do |f| -%>
+
+	<p><%= f.label :title %><br />
+	<%= f.text_field :title %></p>
+
+	<%= submit_tag 'Create Category' %> or <%= link_to 'cancel', '#', :onclick => "jQuery(document).trigger('close.facebox')"%>
+<% end -%>

@@ -1,0 +1,2 @@
+module AssetCategoriesHelper
+end

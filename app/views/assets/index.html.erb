@@ -1,16 +1,25 @@
 <h1>Assets</h1>
 
-<% @assets.each do |assets| -%>
-	<h3><%= assets[0].category.title %></h3>
+<p><%= link_to 'Add a category', '#add_category', :rel => 'facebox' %></p>
+<% @assets.each_pair do |category, assets| -%>
+	<h3><%= category.title %></h3>
+	<p><%= link_to 'Add an asset to this category', "#add_#{dom_id(category)}", :rel => 'facebox' %></p>
 
 	<ul>
 	<% assets.each do |asset| -%>
-		<li><%= asset.title %></li>
+		<li><%= image_tag asset.attachment.url(:square) %> <%= asset.title %></li>
 	<% end -%>
 	</ul>
+	
+	<div id="add_<%=dom_id(category)%>" style="display: none;">
+		<h4>New Asset</h4>
+		<%= render :partial => "assets/form", :locals => {:asset_category_id => category.id, :project => @project, :asset => Asset.new} %>
+	</div>
 
-	<h4>New Asset</h4>
-	<%= render :partial => "assets/form", :locals => {:asset_category_id => assets[0].category.id, :project => @project, :asset => Asset.new} %>
 <% end -%>
+
+<div id="add_category" style="display: none;">
+	<%= render :partial => "asset_categories/form" %>
+</div>
 
 <%#= link_to 'New project', new_client_project_path(@client) %>

@@ -6,9 +6,19 @@
 	<title><%= (title = yield :title) ? title : "Freelancer!" %></title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<%= stylesheet_link_tag 'screen.css' %>
+	<%= stylesheet_link_tag 'facebox.css' %>
 	<%= stylesheet_link_tag 'print.css', :media => :print %>
 	<%= javascript_include_tag 'jquery-min' %>
+	<%= javascript_include_tag 'facebox' %>
 	<%= yield :head %>
+
+	<script type="text/javascript" charset="utf-8">
+		jQuery(document).ready(function($) {
+		  $('a[rel*=facebox]').facebox() 
+		})
+		
+	</script>
+
 </head>
 
 <body>
