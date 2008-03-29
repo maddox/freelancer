@@ -1,3 +1,3 @@
-<h1><%= @client.name %></h1>
+<h1><%= link_to 'Clients', clients_path %> / <%= @client.name %></h1>
 
-<%= link_to 'All Clients', clients_path %>
+<%= link_to 'Show Projects', client_projects_path(@client) %>

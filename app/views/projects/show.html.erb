@@ -1,4 +1,4 @@
-<h1><%= @project.title %></h1>
+<h1><%= link_to @client.name, client_path(@client) %> / <%= link_to 'Projects', client_projects_path(@client) %> / <%= @project.title %></h1>
 
 <dl>
 	<dt>Description</dt>
@@ -8,5 +8,3 @@
 </dl>
 
 <p><%= link_to 'This Project&#8217;s Assets', project_assets_path(@project) %></p>
-
-<p><%= link_to 'All Projects', client_projects_path(@client) %></p>

@@ -1,4 +1,4 @@
-<h1>Assets</h1>
+<h1><%= link_to @project.client.name, client_path(@client) %> / <%= link_to @project.title, client_project_path(@project.client, @project) %> / Assets</h1>
 
 <p><%= link_to 'Add a category', '#add_category', :rel => 'facebox' %></p>
 <% @assets.each_pair do |category, assets| -%>
