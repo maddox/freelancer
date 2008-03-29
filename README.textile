@@ -8,7 +8,12 @@ It's tiny now, so it doesn't do much (if ANYTHING), but keep watching here!
 
 Freelancer wants you to fork it. Freelancer is for freelancers by freelancers.
 
+h4. App Deps
+
+* MySql
+* ImageMagick
+
 h4. Dev Deps
 
 * Rspec
-* MySql
+
