@@ -20,9 +20,19 @@ class AssetsController < ApplicationController
     response_for :destroy do 
       redirect_to project_assets_path(@project)
     end
-
+    
+    before :show do
+      render :layout => "asset"
+    end
 
   end
+
+  def showcase
+    @assets = {}
+    @project.asset_categories.each { |cat| (@assets[cat] = cat.assets) }
+    render :layout => "showcase"
+  end
+  
   
   
 private

@@ -1,0 +1,15 @@
+<div id="site">
+<h1><%= @project.client.name %></h1>
+<div id="links">
+
+<h2 class="first"><%= @project.title %></h2>
+
+<% @assets.each_pair do |category, assets| -%>
+	<h3><%= category.title %></h3>
+	<ul>
+	<% assets.each do |asset| -%>
+		<li><%= image_tag asset.attachment.url(:square) %> <%= link_to asset.title, project_asset_path(@project, asset) %></li>
+	<% end -%>
+	</ul>
+<% end -%>
+
