@@ -1,6 +1,6 @@
 <h1>Clients</h1>
 <% @clients.each do |client| -%>
-<p><%= client.name %> - <%= %></p>	
+<p><%= client.name %> - <%= link_to 'Projects', client_projects_path(client)%> - <%= link_to 'Delete', client_path(client), :method => :delete%></p>	
 <% end -%>
 
 <%= link_to 'New client', new_client_path %>
