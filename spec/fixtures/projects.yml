@@ -3,3 +3,9 @@ big_project:
   title: Money Maker App
   description: This is a huge app that is going to make us millions
   repository: http://www.github.com
+
+crappy_project:
+  client: microsoft
+  title: Online Frontpage
+  description: This is a crappy version of Frontpage for the web. Users can make websites from within the website. Frontpage sucks!
+  repository: http://www.github.com
