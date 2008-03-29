@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 4) do
+ActiveRecord::Schema.define(:version => 5) do
 
   create_table "asset_categories", :force => true do |t|
     t.integer  "project_id"
@@ -23,6 +23,9 @@ ActiveRecord::Schema.define(:version => 4) do
     t.integer  "asset_category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "attachment_file_name"
+    t.string   "attachment_content_type"
+    t.integer  "attachment_file_size"
   end
 
   create_table "clients", :force => true do |t|
