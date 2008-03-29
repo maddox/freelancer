@@ -1,7 +1,7 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+home_page_shot:
+  title: Home page mock up
+  category: home_page
 
-# one:
-#   column: value
-#
-# two:
-#   column: value
+home_page_alternat:
+  title: Home page alternate
+  category: home_page

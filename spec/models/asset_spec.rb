@@ -17,28 +17,19 @@ describe Asset do
 
   end
 
-  # describe "with associations" do
-  # 
-  #   it "should belong to a client" do
-  #     Asset.reflect_on_association(:client).should_not be(nil)
-  #   end
-  # 
-  #   it "should belong to a client officially" do
-  #     @asset = assets(:big_asset)
-  #     @asset.client.should == clients(:microsoft)
-  #   end
-  # 
-  #   it "should have many asset_categories" do
-  #     Asset.reflect_on_association(:asset_categories).should_not be(nil)
-  #   end
-  # 
-  #   it "should have many assets officially" do
-  #     @asset = assets(:big_asset)
-  #     @asset.asset_categories.size.should == 2
-  #   end
-  # 
-  # end
-  # 
+  describe "with associations" do
+  
+    it "should belong to an asset_category" do
+      Asset.reflect_on_association(:category).should_not be(nil)
+    end
+  
+    it "should belong to an asset_category officially" do
+      @asset = assets(:home_page_shot)
+      @asset.category.should == asset_categories(:home_page)
+    end
+
+  end
+  
 
 
 end
