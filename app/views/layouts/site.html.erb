@@ -1,1 +1,47 @@
-<%= yield %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="description" content="Mustache is a web development shop specializing in Ruby on Rails and focused on internet technologies located in Richmond, Va." />
+
+	<title>Mustache, Inc - Development You Can Play With</title>
+
+	<%= stylesheet_link_tag 'facebox.css' %>
+	<%= javascript_include_tag 'jquery-min' %>
+	<%= javascript_include_tag 'facebox' %>
+
+</head>
+<body>
+	<div id="wrapper">
+		<div id="header">
+			<a href="/"><img src="images/logo.gif" alt="mustache logo" /></a>
+			<div id="nav">
+				<a href="/who">Who We Are</a>
+				<a href="/what">What We Do</a>
+				<a href="/how">How We Do It</a>
+				<a href="/contact">How To Contact</a>
+				<a href="http://blog.mustacheinc.com">Weblog</a>
+			</div>
+		</div>
+		<div id="content">
+			<%= yield %>
+		</div>
+		<div id="footer">
+			<a href="/">Home</a>
+			&bull;
+			<a href="/who">Who</a>
+			&bull;
+			<a href="/what">What</a>
+			&bull;
+			<a href="/how">How</a>
+			&bull;
+			<a href="/contact">Contact</a>
+			<p>Copyright &copy; 2008 Mustache, Inc. All rights reserved.</p>
+		</div>
+	</div>
+
+</body>
+</html>
