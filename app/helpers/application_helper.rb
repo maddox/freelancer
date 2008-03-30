@@ -36,6 +36,15 @@ module ApplicationHelper
   def textilizeit(text)
     RedCloth.new(text).to_html
   end
+  
+  def nav_link(page, options = {})
+    case page.is_url?
+    when true
+		  link_to(page.title, page.url)
+    else
+		  link_to(page.title, "/#{page.slug}") unless page.slug == 'home'
+    end
+  end
 
 
 

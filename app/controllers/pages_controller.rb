@@ -7,7 +7,7 @@ class PagesController < ApplicationController
     
     before :show do
       get_site
-      @pages = Page.find :all
+      @pages = Page.find :all, :order => :position
       render :layout => "site"
     end
     
@@ -21,10 +21,31 @@ class PagesController < ApplicationController
 
   end
 
+  def sort
+    load_objects
+    
+    @pages.each do |page|
+      page.position = params[:pages].index("page_" + page.id.to_s) + 1
+      page.save
+    end 
+    
+    respond_to do |format|
+      format.html
+      format.js
+    end
+
+  end
+
+
+
 
 private
   def current_object
     @current_object ||= current_model.find_by_slug(params[:id])
+  end
+
+  def current_objects
+    @current_objects ||= current_model.find(:all, :order => :position)
   end
 
 

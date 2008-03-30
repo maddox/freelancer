@@ -1,6 +1,55 @@
 <h1>Pages</h1>
-<% @pages.each do |page| -%>
-<p><%= link_to "/#{page.slug}", page_path(page.slug) %> -  <%= link_to 'Edit', edit_page_path(page.slug) %> - <%= link_to 'Delete', page_path(page.slug), :method => :delete%></p>	
-<% end -%>
+<ul id="pages">
+	<% @pages.each do |page| -%>
+	<li class="sortableitem" id="<%= dom_id(page) %>"><%= link_to "/#{page.slug}", page_path(page.slug) %> -  <%= link_to 'Edit', edit_page_path(page.slug) %> - <%= link_to 'Delete', page_path(page.slug), :method => :delete%></li>
+	<% end -%>
+</ul>
 
 <%= link_to 'New page', new_page_path %>
+
+<script type="text/javascript" charset="utf-8">
+
+jQuery.ajaxSetup({ 
+  'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")} 
+})  
+
+
+$(document).ready(
+	function () {
+		$('#pages').Sortable(
+			{
+				accept : 		'sortableitem',
+				helperclass : 	'sorthelper',
+				activeclass : 	'sortableactive',
+				hoverclass : 	'sortablehover',
+				opacity: 		0.5,
+		    onchange: function(){
+					serial = $.SortSerialize('pages');
+					$.ajax({
+					    url: '/pages/sort',
+					    type: 'PUT',
+					    dataType: 'script',
+							data: serial.hash,
+					    timeout: 1000,
+					    error: function(){
+					        //alert('Error sorting');
+					    },
+					    success: function(response){
+					        // do something with xml
+								//alert('it worked');
+					    }
+					});
+		    },
+				fx:				200,
+				axis:			'vertically',
+				opacity:		0.4,
+				revert:			true
+			}
+		)
+	}
+);
+
+
+
+	
+</script>

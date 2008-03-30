@@ -22,7 +22,7 @@
 			<%= link_to @site.title, home_url, :id => 'logo' %>
 			<div id="nav">
 				<% @pages.each do |page| -%>
-					<%= link_to( page.title, "/#{page.slug}") unless page.slug == 'home'%>
+					<%= nav_link page %>
 				<% end -%>
 			</div>
 		</div>
@@ -32,7 +32,7 @@
 		<div id="footer">
 			<a href="/">Home</a>
 			<% @pages.each do |page| -%>
-				<%= link_to( "&bull; #{page.title}", "/#{page.slug}") unless page.slug == 'home'%>
+				 <%= nav_link(page).blank? ? '' : " &bull; " + nav_link(page) %> 
 			<% end -%>
 			<%= textilizeit(@site.footer)%>
 		</div>
