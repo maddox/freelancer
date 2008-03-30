@@ -10,7 +10,7 @@ ActionController::Routing::Routes.draw do |map|
   
   
   
-  map.home '/', :controller => 'clients', :action => 'index'
+  map.home '/', :controller => 'pages', :action => 'show', :id => 'home'
   map.stylesheet '/stylesheet', :controller => 'sites', :action => 'stylesheet'
 
   map.connect '/:id', :controller => 'pages', :action => 'show'
