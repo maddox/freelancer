@@ -1,0 +1,10 @@
+default:
+  id: 1
+  title: Your Site Title
+  subtitle: Your Site's subtitle
+  stylesheet:
+  extra_head: 
+  footer: Your site's footer
+  login: admin
+  password: admin
+  
