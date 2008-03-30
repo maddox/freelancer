@@ -6,5 +6,5 @@ default:
   extra_head: 
   footer: Your site's footer
   login: admin
-  password: admin
+  password_encrypted: admin
   
