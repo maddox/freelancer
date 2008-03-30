@@ -33,6 +33,9 @@ module ApplicationHelper
 
   end
 
+  def textilizeit(text)
+    RedCloth.new(text).to_html
+  end
 
 
 

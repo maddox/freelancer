@@ -7,6 +7,14 @@ class PagesController < ApplicationController
       @pages = Page.find :all
       render :layout => "site"
     end
+    
+    response_for :create do 
+      redirect_to objects_path
+    end
+
+    response_for :update do 
+      redirect_to objects_path
+    end
 
   end
 

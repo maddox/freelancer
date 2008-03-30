@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<title><%= @site.title %> &mdash; <%= @page.title ? @page.title : @site.title %></title>
+	<title><%= @site.title %> &mdash; <%= @page.title.blank? ? @site.subtitle : @page.title %></title>
 	<title><%= (title = yield :title) ? title : "Freelancer!" %></title>
 
 	<link href="<%= stylesheet_path %>" media="screen" rel="stylesheet" type="text/css" />
@@ -22,7 +22,7 @@
 			<%= link_to %{<img src="images/logo.gif" alt="mustache logo" />}, home_url %>
 			<div id="nav">
 				<% @pages.each do |page| -%>
-					<%= link_to page.title, "/#{page.slug}"%>
+					<%= link_to( page.title, "/#{page.slug}") unless page.slug == 'home'%>
 				<% end -%>
 			</div>
 		</div>
@@ -31,14 +31,10 @@
 		</div>
 		<div id="footer">
 			<a href="/">Home</a>
-			&bull;
-			<a href="/who">Who</a>
-			&bull;
-			<a href="/what">What</a>
-			&bull;
-			<a href="/how">How</a>
-			&bull;
-			<a href="/contact">Contact</a>
+			<% @pages.each do |page| -%>
+				<%= link_to( "&bull; #{page.title}", "/#{page.slug}") unless page.slug == 'home'%>
+			<% end -%>
+
 			<p>Copyright &copy; 2008 Mustache, Inc. All rights reserved.</p>
 		</div>
 	</div>

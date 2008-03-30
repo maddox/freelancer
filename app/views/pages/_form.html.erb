@@ -1,5 +1,4 @@
-<% form_for @page do |f| -%>
-
+<% fields_for :page do |f| -%>
 	<p><%= f.label :title %><br />
 	<%= f.text_field :title %></p>
 
