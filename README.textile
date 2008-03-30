@@ -12,6 +12,7 @@ h4. App Deps
 
 * MySql
 * ImageMagick
+* RedCloth
 
 h4. Dev Deps
 
