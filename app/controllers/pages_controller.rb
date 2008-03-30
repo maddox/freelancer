@@ -4,6 +4,7 @@ class PagesController < ApplicationController
     
     before :show do
       get_site
+      @pages = Page.find :all
       render :layout => "site"
     end
 

@@ -19,13 +19,11 @@
 <body>
 	<div id="wrapper">
 		<div id="header">
-			<a href="/"><img src="images/logo.gif" alt="mustache logo" /></a>
+			<%= link_to %{<img src="images/logo.gif" alt="mustache logo" />}, home_url %>
 			<div id="nav">
-				<a href="/who">Who We Are</a>
-				<a href="/what">What We Do</a>
-				<a href="/how">How We Do It</a>
-				<a href="/contact">How To Contact</a>
-				<a href="http://blog.mustacheinc.com">Weblog</a>
+				<% @pages.each do |page| -%>
+					<%= link_to page.title, "/#{page.slug}"%>
+				<% end -%>
 			</div>
 		</div>
 		<div id="content">
