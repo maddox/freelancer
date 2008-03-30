@@ -10,10 +10,4 @@ class SitesController < ApplicationController
     redirect_to edit_site_path
   end
 
-
-
-  def get_site
-    @site = Site.find 1
-  end
-
 end

@@ -5,13 +5,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<meta name="description" content="Mustache is a web development shop specializing in Ruby on Rails and focused on internet technologies located in Richmond, Va." />
-
-	<title>Mustache, Inc - Development You Can Play With</title>
+	<title><%= @site.title %> &mdash; <%= @page.title ? @page.title : @site.title %></title>
+	<title><%= (title = yield :title) ? title : "Freelancer!" %></title>
 
 	<%= stylesheet_link_tag 'facebox.css' %>
 	<%= javascript_include_tag 'jquery-min' %>
 	<%= javascript_include_tag 'facebox' %>
+
+	<%=  @site.extra_head %>
 
 </head>
 <body>

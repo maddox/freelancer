@@ -3,6 +3,7 @@ class PagesController < ApplicationController
     actions :all
     
     before :show do
+      get_site
       render :layout => "site"
     end
 
