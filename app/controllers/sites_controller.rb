@@ -10,4 +10,9 @@ class SitesController < ApplicationController
     redirect_to edit_site_path
   end
 
+  def stylesheet
+    headers["Content-Type"] = "text/css; charset=utf-8"
+    render :text => @site.stylesheet
+  end
+
 end

@@ -8,6 +8,7 @@
 	<title><%= @site.title %> &mdash; <%= @page.title ? @page.title : @site.title %></title>
 	<title><%= (title = yield :title) ? title : "Freelancer!" %></title>
 
+	<link href="<%= stylesheet_path %>" media="screen" rel="stylesheet" type="text/css" />
 	<%= stylesheet_link_tag 'facebox.css' %>
 	<%= javascript_include_tag 'jquery-min' %>
 	<%= javascript_include_tag 'facebox' %>
