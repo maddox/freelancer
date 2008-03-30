@@ -1,4 +1,7 @@
 class PagesController < ApplicationController
+  
+  skip_before_filter :authenticate, :only => [:show]
+  
   make_resourceful do
     actions :all
     

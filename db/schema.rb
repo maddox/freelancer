@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 7) do
+ActiveRecord::Schema.define(:version => 8) do
 
   create_table "asset_categories", :force => true do |t|
     t.integer  "project_id"
@@ -59,6 +59,9 @@ ActiveRecord::Schema.define(:version => 7) do
     t.text     "extra_head"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "footer"
+    t.string   "login"
+    t.string   "password_encrypted"
   end
 
 end

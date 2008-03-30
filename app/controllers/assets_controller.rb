@@ -1,5 +1,7 @@
 class AssetsController < ApplicationController
   
+  skip_before_filter :authenticate, :only => [:showcase, :show]
+
   before_filter :find_project
 
   make_resourceful do

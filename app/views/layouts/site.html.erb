@@ -34,8 +34,7 @@
 			<% @pages.each do |page| -%>
 				<%= link_to( "&bull; #{page.title}", "/#{page.slug}") unless page.slug == 'home'%>
 			<% end -%>
-
-			<p>Copyright &copy; 2008 Mustache, Inc. All rights reserved.</p>
+			<%= textilizeit(@site.footer)%>
 		</div>
 	</div>
 
