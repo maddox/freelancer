@@ -56,4 +56,25 @@ Rails::Initializer.run do |config|
 
   # Make Active Record use UTC-base instead of local time
   # config.active_record.default_timezone = :utc
+
+
+
+
+
+
+  config.action_controller.page_cache_directory = RAILS_ROOT+"/public/cache/"
+
+  ### Add these to production ###
+  # Rewrite index to check for static
+  #RewriteRule ^/$ cache/index.html [QSA]
+  # Rewrite to check for Rails cached page
+  #RewriteRule ^([^.]+)$ cache/$1.html [QSA]
+
+
+
+
+
+
+
+
 end

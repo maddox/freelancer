@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  caches_page :show
+  cache_sweeper :cache_sweeper, :only => [ :edit, :destroy, :create ]
   
   skip_before_filter :authenticate, :only => [:show]
   
