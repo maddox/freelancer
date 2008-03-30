@@ -1,0 +1,18 @@
+<h1>Edit Site Settings</h1>
+
+<% form_for :site, :url => site_path, :html => {:method => :put} do |f| -%>
+
+	<p><%= f.label :title %><br />
+	<%= f.text_field :title %></p>
+
+	<p><%= f.label :subtitle %><br />
+	<%= f.text_field :subtitle %></p>
+
+	<p><%= f.label :extra_head %><br />
+	<%= f.text_area :extra_head %></p>
+
+	<p><%= f.label :stylesheet %><br />
+	<%= f.text_area :stylesheet %></p>
+
+	<%= submit_tag 'Save Changes' %> or <%= link_to 'cancel', home_path %>
+<% end -%>
