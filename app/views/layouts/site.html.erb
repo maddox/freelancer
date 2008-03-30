@@ -19,7 +19,7 @@
 <body>
 	<div id="wrapper">
 		<div id="header">
-			<%= link_to %{<img src="images/logo.gif" alt="mustache logo" />}, home_url %>
+			<%= link_to @site.title, home_url, :id => 'logo' %>
 			<div id="nav">
 				<% @pages.each do |page| -%>
 					<%= link_to( page.title, "/#{page.slug}") unless page.slug == 'home'%>
