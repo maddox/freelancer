@@ -69,6 +69,22 @@ a:hover{
 
 
 
+/* FORMS */
+
+
+textarea.wide{
+	width: 800px;
+}
+
+textarea.short{
+	height: 100px;
+}
+
+textarea.tall{
+	height: 600px;
+}
+
+
 
 
 

@@ -9,10 +9,10 @@
 	<%= f.text_field :subtitle %></p>
 
 	<p><%= f.label :extra_head %><br />
-	<%= f.text_area :extra_head %></p>
+	<%= f.text_area :extra_head, :class => 'wide short' %></p>
 
 	<p><%= f.label :stylesheet %><br />
-	<%= f.text_area :stylesheet %></p>
+	<%= f.text_area :stylesheet, :class => 'wide tall' %></p>
 
-	<%= submit_tag 'Save Changes' %> or <%= link_to 'cancel', home_path %>
+	<%= submit_tag 'Save Changes' %> or <%= link_to 'cancel', pages_path %>
 <% end -%>
