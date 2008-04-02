@@ -22,24 +22,16 @@ h4. Installation
 
 * Create the db:
 	<pre><code>
-	mysqladmin -uroot create freelancer_development # or whatever ENV you're trying to run it in
+	RAILS_ENV=production rake db:create
 	</code></pre>
 * Load the schema:
 	<pre><code>
 	rake db:schema:load
 	</code></pre>
-* Copy the sample fixtures:
-	<pre><code>
-	cp db/bootstrap/pages.sample.yml db/bootstrap/pages.yml
-	cp db/bootstrap/sites.sample.yml db/bootstrap/sites.yml
-	</code></pre>
-* Edit the fixtures:
-	<pre><code>
-	db/bootstrap/pages.yml
-	db/bootstrap/sites.yml
-	</code></pre>
-* Bootstrap the db:
+* Bootstrap:
 	<pre><code>
 	rake db:bootstrap:load
 	</code></pre>
 * script/server to start the server - enjoy!
+
+hit /admin and use the default login/password combo of: admin/admin
