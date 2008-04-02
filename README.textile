@@ -22,7 +22,7 @@ h4. Installation
 
 * Create the db:
 	<pre><code>
-	mysqladmin -uroot create freelancer_development (or whatever ENV you're trying to run it in)
+	mysqladmin -uroot create freelancer_development # or whatever ENV you're trying to run it in
 	</code></pre>
 * Load the schema:
 	<pre><code>
