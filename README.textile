@@ -21,26 +21,25 @@ h4. Dev Deps
 h4. Installation
 
 * Create the db:
-
+	<pre><code>
 	mysqladmin -uroot create freelancer_development (or whatever ENV you're trying to run it in)
-
+	</code></pre>
 * Load the schema:
-
+	<pre><code>
 	rake db:schema:load
-	
+	</code></pre>
 * Copy the sample fixtures:
-
+	<pre><code>
 	cp db/bootstrap/pages.sample.yml db/bootstrap/pages.yml
-	
 	cp db/bootstrap/sites.sample.yml db/bootstrap/sites.yml
-
+	</code></pre>
 * Edit the fixtures:
+	<pre><code>
 	db/bootstrap/pages.yml
-	
 	db/bootstrap/sites.yml
-	
+	</code></pre>
 * Bootstrap the db:
-
+	<pre><code>
 	rake db:bootstrap:load
-	
+	</code></pre>
 * script/server to start the server - enjoy!
